@@ -1,0 +1,11 @@
+<p>begin</p>
+
+My skills:
+
+<!--{{user.skills}}-->
+<h1>{{user.fullName}}</h1>
+<ul class="skills">
+    <li class="skills" ng-repeat="skill in user.skills track by $index">{{ skill }}</li>
+</ul>
+
+<p>end</p>

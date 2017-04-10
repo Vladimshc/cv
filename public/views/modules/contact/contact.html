@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="feedback">
+        <h2>Give me feedback</h2>
+        <form name="form" ng-controller="ContactCtrl" ng-submit="submit()" >
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input class="form-control input-lg" ng-model="guest.name" ng-minlength="1" name="name" type="text" placeholder="Your name">
+                    </div>
+                </div>
+                <div class="col-md-5 alert alert-danger" ng-show="form.name.$touched && form.name.$invalid">The name is required.</div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input class="form-control input-lg" ng-model="guest.email" name="email" type="email" placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="col-md-5 alert alert-danger" ng-show="form.email.$touched && form.email.$invalid">The email is required.</div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <textarea
+                                class="form-control input-lg"
+                                ng-model="guest.message"
+                                ng-model-options="{updateOn: 'mousedown blur'}"
+                                ng-minlength="10"
+                                name="message"
+                                placeholder="Message"
+                                cols="45"
+                                rows="3"
+                                style="margin: 0px -4px 0px 0px; height: 211px;">
+                        </textarea>
+
+                    </div>
+                </div>
+                <div class="col-md-5 alert alert-danger" ng-show="form.message.$invalid-minlength">The message is too short !!!</div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Send">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
