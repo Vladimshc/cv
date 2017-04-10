@@ -78,12 +78,27 @@ app.controller('PortfolioCtrl', PortfolioCtrl);
 function PortfolioCtrl($scope, $state) {
     console.log('Portfolio ctrl');
 
-    // $scope.user = {
-    //     fullName: 'John Doe',
-    //     skills: [
-    //         'HTML', 'CSS', 'Javascript', 'SCSS', 'Angular'
-    //     ]
-    // };
+    $scope.user = {
+        portfolio: [{
+            title: 'Test project for learn JS',
+            description: 'This is my test project for learn JS on GeekHub',
+            url: 'https://vladimshc.github.io/',
+            img: '/images/geekhub-logo-2_zoeein.png'
+
+        }, {
+            title: 'RSS aggregator',
+            description: 'News aggregator from rss channels',
+            url: 'http://rss-aggregator.herokuapp.com/',
+            img: '/images/rss-feed.png'
+
+        }, {
+            title: 'To-Do list',
+            description: 'App built on \'Express\' and use MongoDB',
+            url: 'https://vladimshc-todo-list.herokuapp.com',
+            img: '/images/nodejs-express-mongo.jpg'
+
+        }]
+    };
 }
 'use strict';
 
@@ -93,12 +108,33 @@ app.controller('SkillsCtrl', SkillsCtrl);
 function SkillsCtrl($scope, $state) {
     console.log('SKills ctrl');
 
-    // $scope.user = {
-    //     fullName: 'Volodymyr Shcherbyna',
-    //     skills: [
-    //         'HTML', 'CSS', 'Javascript', 'SCSS', 'Angular'
-    //     ]
-    // };
+    $scope.user = {
+        skills: [{
+            title: 'HTML',
+            value: 60
+        }, {
+            title: 'CSS',
+            value: 50
+        }, {
+            title: 'SCSS',
+            value: 40
+        }, {
+            title: 'Javascript',
+            value: 40
+        }, {
+            title: 'Angular',
+            value: 30
+        }, {
+            title: 'React',
+            value: 30
+        }, {
+            title: 'Node',
+            value: 40
+        }, {
+            title: 'MongoDb',
+            value: 40
+        }]
+    };
 }
 'use strict';
 
@@ -106,15 +142,12 @@ MainCtrl.$inject = ["$scope", "$state"];
 app.controller('MainCtrl', MainCtrl);
 
 function MainCtrl($scope, $state) {
-    // console.log($scope.user.fullName + "+++++++++++++test+++++++++++++++");
-
     console.log('Main ctrl', $state.current.name);
 
     $scope.var1 = 'var1112';
 
     $scope.user = {
-        fullName: 'Volodymyr Shcherbyna',
-        skills: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Angular']
+        fullName: 'Volodymyr Shcherbyna'
     };
 
     $scope.guest = {};

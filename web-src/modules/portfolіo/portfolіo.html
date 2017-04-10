@@ -1,1 +1,14 @@
-this is portfolio
+<h1>Portfolio</h1>
+
+<div class="" ng-repeat="portfolio in user.portfolio track by $index">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src={{portfolio.img}}
+                 alt="" class=""
+                 style="width: 100%;
+                        background-color: #ffffff";
+            >
+            <h2>{{ portfolio.title }}</h2>
+            <p>{{ portfolio.description }}</p>
+            <p><a class="btn btn-primary btn-lg" href= {{portfolio.url}} role="button">Learn more</a></p>
+    </div>
+</div>
